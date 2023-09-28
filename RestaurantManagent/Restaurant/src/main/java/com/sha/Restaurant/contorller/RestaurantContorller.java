@@ -35,4 +35,8 @@ import java.util.Map;
     public String updateRestaurantDish( @PathVariable Integer id ,@RequestParam String rtAddress){
          return  restaurantService.updateRestaurant(id ,rtAddress) ;
      }
+     @PutMapping("UpdateBYId")
+      public  String getById(@RequestBody Integer id ,String name){
+            return restaurantService.updateById(id ,name );
+     }
  }

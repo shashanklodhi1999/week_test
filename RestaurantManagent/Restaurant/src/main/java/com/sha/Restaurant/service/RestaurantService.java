@@ -45,6 +45,6 @@ public class RestaurantService {
             Restaurant restaurant = getAllRestaurant().get(id);
             restaurant.setRtAddress(rtAddress);
         }
-        return  "address id updated ";
-    }
+        return  "address id updated ";}
+
 }
