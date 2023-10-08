@@ -15,13 +15,15 @@ public class AddressController {
     AddService addService;
     @PostMapping("Address")
   public  String addAddress(@RequestBody Address newAdd){
-      return addService.addEmp(newAdd);
+
+        return addService.addEmp(newAdd);
   }
     @GetMapping("Address")
     public List<Address> Add() {
          return addService.getAdd();
     }
     @GetMapping("FindAddressById")
+
     public  Address getById(@RequestParam Long id){
         return  addService.getById(id);
     }
