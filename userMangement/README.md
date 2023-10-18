@@ -1,13 +1,8 @@
 
 # User Management System :
 
-## Overview
 
-This project provides a basic design for the backend of Instagram. It includes the following features:
-
-- User authentication (sign up, sign in ,sing out)
-- User profile management (update user details)
-- Post management (save and retrieve posts)
+The user  Management System is a Spring Boot application that allows you to manage a list of user with the help of List . It provides API endpoints for basic operations like creating, retrieving, updating, and deleting user.
 
 ## Table of Contents
 
@@ -24,19 +19,21 @@ This project provides a basic design for the backend of Instagram. It includes t
 
 ## Introduction
 
-The Instagram backend application  simplifies the creating a user and like sing up the user and sing in the user and Authenticate every time while facting the user details.
+The User  Management System simplifies the management of User by providing a set of APIs to create, get ,update, and delete User information.
 
 ## Dependency
 - Spring web 
-- Lombok
+- maven 
 - validation
-- spring JPA
-- Swagger 
-- MySql drivers 
 ## Features
-- User sing up with encrypting password .
-- USer sing in and Authenticate and receive a token.
--
+- Used List to storing the data .
+
+- Create and manage user records.
+- Retrieve user details by ID or get a list of all User.
+- Update a user entity by it'is id  .
+- Delete a user .
+- post the user.
+
 ## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
@@ -69,31 +66,32 @@ The application will start on http://localhost:8080.
 
  ## The following API endpoints are available:
 
-### user controller 
 
-- Post :- sing up
-  URL: /userSingup 
 
-- Post :- sing in
-  URL: /userSingIn
+- Get All User :
 
-- Delete :- sing out
-  URL: /usersingOut
+URL: /users
+Method: GET
+Example: http://localhost:8080/users
 
-### Post controller 
-- post intragram post 
-  URL: /Post
-- Get : get posts 
-  URL: /posts
+-  Add a new User:
 
-- Get : get psot by id 
-  URL: /post  
+URL: /users
+Method: POST
+Example: http://localhost:8080/users
+Request Body: JSON representing the User details.
+
+- Delete the User by id :
+Url: /deleteUser/{id}
+Method:Delete
+Example : http://localhost:8080/deleteUser/100
+
+- Update the user password:
+Url:/user/password
+Method: Post
+PathVariable  is define as id and usermail 
+Example : http://localhost:8080/user/password
+data is sending in json format.
 
 # Contributing
 Contributions are welcome! Feel free to open issues or submit pull requests to improve this project.
-
-
-
-
-
-
