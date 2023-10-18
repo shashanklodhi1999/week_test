@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @Entity
 public class Post {
     @Id
-   // @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.UUID)
     private String postId;
     private String caption ;
 
